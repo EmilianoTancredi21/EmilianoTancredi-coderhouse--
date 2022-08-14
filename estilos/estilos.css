@@ -384,11 +384,13 @@ grid-gap: 20px;
 
 .historia_img{
     grid-area: imgHistoria;
+    margin-top: 7%;
+    margin-right: 3%;
 }
 
 .historia{
     grid-area: Phistoria;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
 .historia_img img{
@@ -450,7 +452,7 @@ grid-gap: 20px;
         grid-template-rows:  auto;
         gap: 0.3rem;
         grid-template-areas: 
-        'imgHistoria Phistoria'
+        'Phistoria imgHistoria'
         
         ;
         justify-items: center;
