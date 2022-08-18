@@ -1,95 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./estilos/estilos.css">
     <title>Surtekno - Distribuidora de perfiles</title>
-</head>
-
-<body>
-
+  </head>
+  
+  <body>
     <header>
-        <img class="logo" src="./imagenes/logo-surtekno.jpg" alt="Logo empresa" height="80px">
-        <nav>
-
-            <ul>
-
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="./secciones/productos.html">Productos</a>
-                </li>
-                <li>
-                    <a href="./secciones/nosotros.html">Nosotros</a>
-                </li>
-                <li>
-                    <a href="./secciones/obras.html">Obras</a>
-                </li>
-                <li>
-                    <a href="./secciones/contacto.html">Contacto</a>
-                </li>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-5" href="#">
+            <img src="./imagenes/logo-surtekno.png" alt="Logo Empresa" width="340px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto me-5 align-items-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./secciones/productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./secciones/obras.html">Obras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./secciones/nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./secciones/contacto.html">Contacto</a>
+              </li>
             </ul>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
+  
+    <h1 class="text-center">Distribuidora de perfiles y mayorista de aberturas</h1>
+  
     <main>
-        <section class="Sprincipal">
-        <h1>
-            DISTRIBUIDORA DE PERFILES Y FABRICA DE ABERTURAS
-        </h1>
-        <div class="Sprincipal_img">
-        <img class="collage" src="imagenes/fondo-home.jpg" alt="algunos de nuestros trabajos">
-        </div>
-        <div class="Scontainer">
-
-            <div class="card">
-                <img src="./icons/icons8-monedas-50.png" alt="Monedas">
-                <p>PRESUPUESTOS SIN CARGO <br>
-                    Antes de comprar compare nuestros precios y calidad.
-                </p>
-            </div>
-            
-            <div class="card">
-                <img src="./icons/icons8-camión-50.png" alt="Camion">
-                <p>ENVIOS A TODO EL PAÍS <br>
-                    Realizamos envios al interior sin ningún costo agregado
-                </p>
-            </div>
-            
-            <div class="card">
-                <img src="./icons/icons8-premio-50.png" alt="Liston">
-                <p>CALIDAD ASEGURADA <br>
-                    Disponemos de más de 15 años de experiencia en el rubro
-                </p>
-            </div>
-
-
-
-        </div>
-
-    </section>
-
-    </main>
-
-
-
-
-
-
-
+      <div class="Sprincipal_img">
+          <center><img class="collage" src="imagenes/fondo-home.jpg" alt="algunos de nuestros trabajos"></center>
+      </div>
+  </main>
+  
     <footer>
-        <div class="redes">
-            <img src="./imagenes/iconofacebook.svg" alt="iconoFacebook">
-            <img src="./imagenes/iconoinstagram.svg" alt="iconoInstagram">
-            <img src="./imagenes/icons8-whatsapp.svg" alt="iconoWhatsapp">
-        </div>
-
+  
+      <div class="footer-content">
+        <h3>Surtekno Srl.</h3>
+        <p>Surtekno es una empresa dedicada a la distribución de perfilería y fabricación de aberturas de aluminio.</p>
+        Creado en Buenos Aires Argentina por Tancredi Emiliano
+      </div>
+  
+      <ul class="socials">
+        <li> <a href="https://www.facebook.com/"><img src="./imagenes/iconofacebook.svg" alt="logoFacebook">
+        <li> <a href="https://www.instagram.com/"><img src="./imagenes/iconoinstagram.svg" alt="logoInstagram">
+        <li> <a href="https://web.whatsapp.com/"><img src="./imagenes/icons8-whatsapp.svg" alt="logoWhatsapp">
+      </ul>
+  
     </footer>
-
-
-</body>
-
-</html>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+  </body>
+  
+  </html>
