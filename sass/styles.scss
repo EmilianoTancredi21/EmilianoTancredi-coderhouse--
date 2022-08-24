@@ -1,18 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300&family=Poppins:wght@300&family=Yanone+Kaffeesatz&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    background-color: rgb(196, 196, 196);
-}
+@import "general";
+@import "variables";
+@import "footer";
 
 .navbar{
     font-size: 2.5rem;
@@ -23,7 +11,7 @@ h1{
     font-size: 5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: aliceblue;
+    color: $colorText;
     background-image: url(../imagenes/patronceleste.jpg);
     margin: 10px;
     
@@ -42,69 +30,7 @@ h3{
 }
 
 
-
-/* ----------------- Footer -------------------- */
-
-footer{
-        font-size: 2rem;
-        font-family: 'Poppins', sans-serif;
-        position: absolute;
-        background: #111;
-        height: auto;
-        width: 100vw;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        color: #fff;
-    }
-
-    .footer-content{
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-    }
     
-    .footer-content h3{
-        font-size: 2.9rem;
-        font-weight: 500;
-        text-transform: capitalize;
-        line-height: 3rem;
-    }
-
-    .footer-content p{
-        max-width: 500px;
-        margin: 10px auto;
-        line-height: 28px;
-        font-size: 14px;
-        color: #cacdd2;
-    }
-
-    .socials{
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 1rem 0 0 0;
-    }
-    
-    .socials li{
-        margin: 0 10px;
-    }
-    
-    .socials a{
-        text-decoration: none;
-    }
-    
-    .socials a i{
-        font-size: 1.1rem;
-        width: 20px;
-        transition: color .4s ease;
-    }
-    
-
-
 /* ----------- OBRAS ----------- */
 
 .col-lg-4{
