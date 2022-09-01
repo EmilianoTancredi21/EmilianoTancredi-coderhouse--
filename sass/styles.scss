@@ -49,48 +49,83 @@ h3{
 
 /* ---------- formulario ----------- */
 
-
-form{
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    width: 450px;
-    margin: auto;
-    background: #fff;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
-    border-radius: 8px;
+.mapa{
+    margin: 0 15px 0 15px;
 }
 
-.formh2{
-    color: rgb(0, 0, 0);
-    font-family: 'Poppins', sans-serif;
-    margin: 0%;
-    font-size: 4rem;
-    margin-bottom: 20px;
-    font-size: 3.5rem;
 
-}
-
-input, textarea{
+input[type=text], select, textarea{
     width: 100%;
-    margin-bottom: 20px;
-    padding: 7px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-sizing: border-box;
+    resize: vertical;
     font-size: 2rem;
-}
-
-textarea{
-    min-height: 100px;
-    max-height: 200px;
-}
+  }
   
-#boton{
-    background: #004D6D;
-    color: #fff;
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  
+ 
+input[type=submit] {
+    background-color: #014C6B;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+
+.container-fluid {
+    border-radius: 5px;
+    background-color: #f2f2f2;
     padding: 20px;
-}
+    font-size: 3rem;
+  }
+
+.container-fluid h2{
+    background-image: url(../imagenes/patron.jpg);
+    color: aliceblue;
+  }
+  
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+ 
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+  }
 
 
 /* ---------- Nosotros ----------- */
@@ -143,6 +178,15 @@ textarea{
     display: flex;
     justify-content: center;
     font-size: 2rem;
+}
+
+/* ---------- EXTEND ----------- */  
+
+.btn{
+    @extend .btn;
+    background-color: #014C6B;
+    border-radius: 5px;
+    font-weight: 400;
 }
 
 

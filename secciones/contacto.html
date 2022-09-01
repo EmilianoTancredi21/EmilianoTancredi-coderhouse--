@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Ubicación, localidad, provincia, barrio, presupuesto, teléfono, redes">
+  <meta name="description" content="¿Tenés alguna consulta?, no dudes en contactarnos para que podamos ayudarte.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="../estilos/styles.css">
@@ -47,23 +49,66 @@
     <h1 class="formulario text-center">Contacto</h1>
   </header>
 
-  <div class="mapa">
+  <section class="mapa">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.906527736706!2d-58.393060084172276!3d-34.707537470507056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd2304c40089%3A0x7fafac9e3e9126d6!2zTGFuw7pz!5e0!3m2!1ses-419!2sar!4v1661001961340!5m2!1ses-419!2sar"
-      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+      width="100%" height="400vh" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+  </section>
 
-  <form action="">
-    <img src="../imagenes/logo-surtekno.png" alt=""> <br>
-    <h2 class="formh2 text-center">Envianos tu mensaje!</h2>
-    <input type="text" name="Nombre" placeholder="Nombre">
-    <input type="text" name="Apellido" placeholder="Apellido">
-    <input type="text" name="Email" placeholder="Email">
-    <input type="text" name="Telefono" placeholder="Telefono">
-    <textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
-    <input type="button" value="ENVIAR" id="boton">
-  </form> <br> <br>
+  <div class="container-fluid my-3">
+      <h2 class="text-center">Envianos tu consulta!</h2>
+      <form>
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Nombre</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Su nombre..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Apellido</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Su apellido..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="country">Provincia</label>
+          </div>
+          <div class="col-75">
+            <select id="country" name="Ciudad">
+              <option value="australia">Formosa</option>
+              <option value="canada">Chaco</option>
+              <option value="usa">Jujuy</option>
+              <option value="australia">Corrientes</option>
+              <option value="canada">Entre Rios</option>
+              <option value="usa">Buenos Aires</option>
+              <option value="australia">Santa Fe</option>
+              <option value="canada">Tierra del fuego</option>
+              <option value="usa"> Mendoza</option>
+              <option value="australia">La Pampa</option>
+              <option value="canada">Santa Cruz</option>
+              <option value="usa">Rio Negro</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Consulta</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Escriba su mensaje.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="ENVIAR">
+        </div>
+      </form>
+    </div>
 
 
 </body>
