@@ -2,22 +2,28 @@
 @import "variables";
 @import "footer";
 
-.navbar{
-    font-size: 2.5rem;
+.navbar {
+    font-size: 2.2rem;
+}
+
+.collapse ul {
+    gap: 20px;
+    transition: 0ms;
 }
 
 
-h1{
+
+h1 {
     font-size: 5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: $colorText;
     background-image: url(../imagenes/patronceleste.jpg);
     margin: 10px;
-    
+
 }
 
-h2{
+h2 {
     font-size: 4rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -25,36 +31,38 @@ h2{
     margin: 10px;
 }
 
-h3{
+h3 {
     font-size: 4rem;
 }
 
 
-    
+
 /* ----------- OBRAS ----------- */
 
-.col-lg-4{
+.col-lg-4 {
     margin: 0;
     padding: 3px;
 }
 
-.galeria-container img{
+.galeria-container img {
     width: 100%;
     height: 480px;
 }
 
-.galeria-container img:hover{
+.galeria-container img:hover {
     border: 5px solid rgb(215, 215, 216);
 }
 
 /* ---------- formulario ----------- */
 
-.mapa{
+.mapa {
     margin: 0 15px 0 15px;
 }
 
 
-input[type=text], select, textarea{
+input[type=text],
+select,
+textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -62,8 +70,8 @@ input[type=text], select, textarea{
     box-sizing: border-box;
     resize: vertical;
     font-size: 2rem;
-  }
-  
+}
+
 
 label {
     padding: 12px 12px 12px 0;
@@ -71,9 +79,9 @@ label {
     font-size: 2.5rem;
     margin-left: 10px;
     font-weight: 600;
-  }
-  
- 
+}
+
+
 input[type=submit] {
     background-color: #014C6B;
     color: white;
@@ -82,107 +90,219 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     float: right;
-  }
-  
+}
+
+input[type=submit]:hover {
+    background: #00425e;
+    color: white;
+    border-radius: 5px;
+}
 
 .container-fluid {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
     font-size: 3rem;
-  }
+}
 
-.container-fluid h2{
+.container-fluid h2 {
     background-image: url(../imagenes/patron.jpg);
     color: aliceblue;
-  }
-  
+}
+
 
 .col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
-  }
-  
-  
+}
+
+
 .col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
-  }
-  
- 
+}
+
+
 .row:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
- 
+}
+
+
 @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-      font-size: 1.5rem;
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+        font-size: 1.5rem;
     }
-  }
+}
 
 
 /* ---------- Nosotros ----------- */
 
-.historia {
-    font-size: 1.6rem;
-    padding: 40px;
-    margin: 30px;
+.nosotros {
+    padding: 4rem;
+    background-color: rgb(219, 219, 219);
 }
 
-.historia_img{
-    grid-area: imgHistoria;
-    margin: auto;
-}
-
-.historia{
-    grid-area: Phistoria;
-    font-size: 2rem;
-    margin: auto;
-}
-
-.historia_img img{
+.contenedor-nosotros {
     width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-.historiaContainer{
-    margin: 0.3rem 0;
-    padding: 0 0.3rem;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    gap: 0.3rem;
-    grid-template-areas: 
-    'Phistoria'
-    'imgHistoria'
-    ;
+.nosotros-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        font-size: 2.5rem;
+        line-height: 50px;
+    }
+
+    h4 {
+        font-size: 4rem;
+        margin-bottom: 30px;
+    }
+
+}
+
+.nosotros img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .contenedor-nosotros {
+        margin: 30px auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
 }
 
 /* ---------- Productos ---------- */
 
-.row h4{
-    font-size: 2rem;
-}
-
-.row p{
+.row p {
     font-size: 1.5rem;
 }
 
-.btn{
+.btn {
     display: flex;
     justify-content: center;
     font-size: 2rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
-/* ---------- EXTEND ----------- */  
+.grid {
+    display: grid;
+    grid-auto-rows: auto;
+}
 
-.btn{
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        margin: 0 5.5vw;
+    }
+
+    .grid img {
+        width: 25.8vw;
+    }
+
+    .grid p {
+        width: 25.8vw;
+        font-size: 2rem;
+    }
+
+    .grid div img {
+        width: 100%;
+        margin: 5vw 0;
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .grid div h2 {
+        font-weight: bold;
+        margin: 5vw 0;
+        font-size: 2.8rem;
+    }
+
+    .grid div h3 {
+        margin: 8vw 0 3vw 0;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .grid div h3 span {
+        font-weight: normal;
+        margin-left: 0.4vw;
+    }
+
+    .grid div p {
+        width: 100%;
+        margin-bottom: 5vw;
+    }
+}
+
+@media (min-width: 769px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 5vw;
+        margin-top: 20px;
+    }
+
+    .grid div {
+        margin: 0 2vw 0 1.5vw;
+    }
+
+    .grid div img {
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+        transition: all 0.1s;
+        width: 25.8vw;
+    }
+
+    .grid div img:hover {
+        border: 5px solid rgb(215, 215, 216);
+    }
+
+    .grid div h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        padding-right: 3.1vw;
+    }
+
+    .grid div h3 {
+        margin-top: 1vw;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .grid div h3 span {
+        font-weight: normal;
+        margin-left: 0.4vw;
+    }
+
+    .grid div p {
+        padding: 10px 0;
+        width: 25.8vw;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}
+
+/* ---------- EXTEND ----------- */
+
+.btn {
     @extend .btn;
     background-color: #014C6B;
     border-radius: 5px;
@@ -192,139 +312,210 @@ input[type=submit] {
 
 /* -------- inicio --------- */
 
+.container-portada {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    background-image: url(../imagenes/0003000572235slider-patricio-2021.jpg);
+    background-size: 200%;
+    animation: movimiento 30s infinite linear alternate;
+
+}
+
+@keyframes movimiento {
+    from {
+        background-position: bottom left;
+    }
+
+    to {
+        background-position: top right;
+    }
+}
 
 
-.Sprincipal_img img{
-    width: 90%;
-    margin: 10px;
+.capa-gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black, #035faf);
+    opacity: 0.6;
+}
+
+.container-details {
+    display: flex;
+    justify-content: center;
+}
+
+
+.details {
+    max-width: 800px;
+    color: white;
+    position: relative;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.details h2 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.details p {
+    margin-top: 10px;
+    font-size: 2.2rem;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.details button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-style: none;
+    background-color: #014C6B;
+    color: white;
+    border: 1px solid #014C6B;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 300ms;
+    cursor: pointer;
+    margin-left: 10px
+}
+
+.details button:hover {
+    background: #03628b;
+    color: white;
+    border-radius: 5px;
+}
+
+.details .btn2 {
+    background-color: brown;
+}
+
+.details .btn2:hover {
+    background-color: rgb(202, 51, 51);
+}
+
+
+hr {
+    max-width: auto;
+    height: 4px;
+    border-style: none;
+    background: -webkit-linear-gradient(left, black, #0672d0);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+/*Texto inicio*/
+
+.Tprincipal {
+    margin-top: 5px;
+    padding: 20px;
+    color: #fff;
+    background-image: url(../imagenes/patron.jpg);
+}
+
+.inicio {
+    padding: 4rem;
+    background-color: rgb(219, 219, 219);
+}
+
+.contenedor-inicio {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.inicio-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        font-size: 2.5rem;
+        line-height: 50px;
+    }
+
+    h4 {
+        font-size: 4rem;
+        margin-bottom: 30px;
+    }
+
+}
+
+.inicio img {
+    width: 100%;
+    height: 100%;
+}
+
+#material .contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#material h4 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.materialh4 {
+    font-size: 5rem;
+    margin-top: 1rem;
+    color: #fff;
+    background-image: url(../imagenes/patron.jpg);
+}
+
+#material .item {
+    margin: 40px;
+}
+
+
+#material img {
+    width: 100%;
+    max-width: 280px;
 }
 
 
 
-@media screen and (min-width: 576px){
-    
-    .historia{
-        grid-area: Phistoria;
-        font-size: 1rem;
-    }
-
-    .historia_img img{
+@media screen and (min-width: 1024px) {
+    .contenedor-inicio {
+        margin: 30px auto;
         width: 100%;
-        
-    }
-    
-    .historiaContainer{
-        margin: 1rem 0 3rem 0;
-        padding: 0 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows:  auto;
-        gap: 0.3rem;
-        grid-template-areas: 
-        'imgHistoria Phistoria'
-        
-        ;
-        justify-items: center;
+        gap: 30px;
     }
 }
 
 
-@media screen and (min-width: 768px){
-    
-    .historia{
-        grid-area: Phistoria;
-        font-size: 1.2rem;
+
+
+/* ------- MEDIAQ ------ */
+
+@media (max-width:480px) {
+    .footer-menu ul {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
-    .historia_img img{
+    form {
         width: 100%;
-        
     }
-    
-    .historiaContainer{
-        margin: 1rem 0 3rem 0;
-        padding: 0 1rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows:  auto;
-        gap: 0.3rem;
-        grid-template-areas: 
-        'imgHistoria Phistoria'
-        
-        ;
-        justify-items: center;
+
+    h1 {
+        font-size: 2rem;
     }
+
 }
 
-
-
-@media screen and (min-width: 1024px){
-    
-    .historia{
-        grid-area: Phistoria;
-        font-size: 1.8rem;
-    }
-    
-    .historiaContainer{
-        margin: 1rem 0 3rem 0;
-        padding: 0 1rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows:  auto;
-        gap: 0.3rem;
-        grid-template-areas: 
-        'imgHistoria Phistoria'
-        
-        ;
-        justify-items: center;
+@media(max-width:1024px) {
+    h1 {
+        font-size: 3rem;
     }
 }
-
-
-@media screen and (min-width: 1200px){
-    
-    .historia{
-        grid-area: Phistoria;
-        font-size: 3.5rem;
-    }
-    
-    .historiaContainer{
-        margin: 1rem 0 3rem 0;
-        padding: 0 1rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows:  auto;
-        gap: 0.3rem;
-        grid-template-areas: 
-        'imgHistoria Phistoria'
-        
-        ;
-        justify-items: center;
-    }
-}
-
-
-    /* ------- MEDIAQ ------ */
-
-    @media (max-width:480px) {
-        .footer-menu ul{
-          display: flex;
-          margin-top: 10px;
-          margin-bottom: 20px;
-        }
-
-        form{
-            width: 100%;
-        }
-
-        h1{
-            font-size: 2rem;
-        }
-
-        }
-
-    @media(max-width:1024px){
-        h1{
-            font-size: 3rem;
-        }
-    }
