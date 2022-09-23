@@ -1,0 +1,110 @@
+/* ---------- Productos ---------- */
+
+.row p {
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        margin: 0 5.5vw;
+    }
+
+    .grid img {
+        width: 25.8vw;
+    }
+
+    .grid p {
+        width: 25.8vw;
+        font-size: 2rem;
+    }
+
+    .grid div img {
+        width: 100%;
+        margin: 5vw 0;
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .grid div h2 {
+        font-weight: bold;
+        margin: 5vw 0;
+        font-size: 2.8rem;
+    }
+
+    .grid div h3 {
+        margin: 8vw 0 3vw 0;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .grid div h3 span {
+        font-weight: normal;
+        margin-left: 0.4vw;
+    }
+
+    .grid div p {
+        width: 100%;
+        margin-bottom: 5vw;
+    }
+}
+
+@media (min-width: 769px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 5vw;
+        margin-top: 20px;
+    }
+
+    .grid div {
+        margin: 0 2vw 0 1.5vw;
+    }
+
+    .grid div img {
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.4);
+        transition: all 0.1s;
+        width: 25.8vw;
+    }
+
+    .grid div img:hover {
+        border: 5px solid rgb(215, 215, 216);
+    }
+
+    .grid div h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        padding-right: 3.1vw;
+    }
+
+    .grid div h3 {
+        margin-top: 1vw;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .grid div h3 span {
+        font-weight: normal;
+        margin-left: 0.4vw;
+    }
+
+    .grid div p {
+        padding: 10px 0;
+        width: 25.8vw;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}

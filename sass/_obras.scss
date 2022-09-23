@@ -1,0 +1,16 @@
+/* ----------- OBRAS ----------- */
+
+.col-lg-4 {
+    margin: 0;
+    padding: 3px;
+}
+
+.galeria-container img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+.galeria-container img:hover {
+    border: 5px solid rgb(215, 215, 216);
+}

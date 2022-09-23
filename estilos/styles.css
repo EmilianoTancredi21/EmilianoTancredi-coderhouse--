@@ -13,216 +13,182 @@ body {
   background-color: rgb(226, 226, 226);
 }
 
-footer {
-  font-size: 2rem;
-  font-family: "Poppins", sans-serif;
-  position: absolute;
-  background: #111;
-  height: auto;
+/* -------- inicio --------- */
+.container-portada {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: aliceblue;
+  height: 450px;
+  position: relative;
+  background-image: url(../imagenes/0003000572235slider-patricio-2021.jpg);
+  background-size: 200%;
+  -webkit-animation: movimiento 30s infinite linear alternate;
+          animation: movimiento 30s infinite linear alternate;
 }
 
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-.footer-content h3 {
-  font-weight: 600;
-  text-transform: capitalize;
-  line-height: 3rem;
-}
-.footer-content p {
-  max-width: 500px;
-  margin: 10px auto;
-  line-height: 28px;
-  color: aliceblue;
-}
-
-.socials {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0 0 0;
-}
-.socials li {
-  margin: 0 10px;
-}
-.socials li a {
-  text-decoration: none;
-}
-.socials li a i {
-  font-size: 1.1rem;
-  width: 20px;
-  transition: color 0.4s ease;
-}
-
-/* ---------- MIXIN ----------- */
-.footer-content {
-  font-size: 19px;
-  color: #035477;
-}
-
-.navbar {
-  font-size: 2.2rem;
-}
-
-.collapse ul {
-  gap: 20px;
-  transition: 0ms;
-}
-
-h1 {
-  font-size: 5rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  color: aliceblue;
-  background-image: url(../imagenes/patronceleste.jpg);
-  margin: 10px;
-}
-
-h2 {
-  font-size: 4rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  color: rgb(0, 0, 0);
-  margin: 10px;
-}
-
-h3 {
-  font-size: 4rem;
-}
-
-/* ----------- OBRAS ----------- */
-.col-lg-4 {
-  margin: 0;
-  padding: 3px;
-}
-
-.galeria-container img {
-  width: 100%;
-  height: 480px;
-}
-
-.galeria-container img:hover {
-  border: 5px solid rgb(215, 215, 216);
-}
-
-/* ---------- formulario ----------- */
-.mapa {
-  margin: 0 15px 0 15px;
-}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
-  font-size: 2rem;
-}
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-  font-size: 2.5rem;
-  margin-left: 10px;
-  font-weight: 600;
-}
-
-input[type=submit] {
-  background-color: #014C6B;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
-
-input[type=submit]:hover {
-  background: #00425e;
-  color: white;
-  border-radius: 5px;
-}
-
-.container-fluid {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  font-size: 3rem;
-}
-
-.container-fluid h2 {
-  background-image: url(../imagenes/patron.jpg);
-  color: aliceblue;
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-    font-size: 1.5rem;
+@-webkit-keyframes movimiento {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: top right;
   }
 }
-/* ---------- Nosotros ----------- */
-.nosotros {
+
+@keyframes movimiento {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+.capa-gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: -webkit-linear-gradient(left, black, #035faf);
+  opacity: 0.6;
+}
+
+.container-details {
+  display: flex;
+  justify-content: center;
+}
+
+.details {
+  max-width: 800px;
+  color: white;
+  position: relative;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.details h2 {
+  font-size: 80px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.details p {
+  margin-top: 10px;
+  font-size: 2.2rem;
+  font-weight: 100;
+  margin-left: 10px;
+}
+
+.details button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-style: none;
+  background-color: #014C6B;
+  color: white;
+  border: 1px solid #014C6B;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background 300ms;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.details button:hover {
+  background: #03628b;
+  color: white;
+  border-radius: 5px;
+}
+
+.details .btn2 {
+  background-color: brown;
+}
+
+.details .btn2:hover {
+  background-color: rgb(202, 51, 51);
+}
+
+hr {
+  max-width: auto;
+  height: 4px;
+  border-style: none;
+  background: -webkit-linear-gradient(left, black, #0672d0);
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/*Texto inicio*/
+.Tprincipal {
+  margin-top: 5px;
+  padding: 20px;
+  color: #fff;
+  background-image: url(../imagenes/patron.jpg);
+}
+
+.inicio {
   padding: 4rem;
   background-color: rgb(219, 219, 219);
 }
 
-.contenedor-nosotros {
+.contenedor-inicio {
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
 }
 
-.nosotros-texto {
+.inicio-texto {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.nosotros-texto p {
+.inicio-texto p {
   font-size: 2.5rem;
   line-height: 50px;
 }
-.nosotros-texto h4 {
-  font-size: 4rem;
+.inicio-texto h4 {
+  font-size: 3.5rem;
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 
-.nosotros img {
+.inicio img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#material .contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#material h4 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.materialh4 {
+  font-size: 4rem;
+  margin-top: 1rem;
+  color: #fff;
+  background-image: url(../imagenes/patron.jpg);
+}
+
+#material .item {
+  margin: 40px;
+}
+
+#material img {
+  width: 100%;
+  max-width: 280px;
+}
+
+#material img:hover {
+  border: 5px solid rgb(215, 215, 216);
 }
 
 @media screen and (min-width: 1024px) {
-  .contenedor-nosotros {
+  .contenedor-inicio {
     margin: 30px auto;
     width: 100%;
     display: grid;
@@ -324,182 +290,63 @@ input[type=submit]:hover {
     margin-top: 10px;
   }
 }
-/* ---------- EXTEND ----------- */
-.btn {
-  background-color: #014C6B;
-  border-radius: 5px;
-  font-weight: 400;
+/* ----------- OBRAS ----------- */
+.col-lg-4 {
+  margin: 0;
+  padding: 3px;
 }
 
-/* -------- inicio --------- */
-.container-portada {
+.galeria-container img {
   width: 100%;
-  height: 450px;
-  position: relative;
-  background-image: url(../imagenes/0003000572235slider-patricio-2021.jpg);
-  background-size: 200%;
-  -webkit-animation: movimiento 30s infinite linear alternate;
-          animation: movimiento 30s infinite linear alternate;
+  height: 480px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-@-webkit-keyframes movimiento {
-  from {
-    background-position: bottom left;
-  }
-  to {
-    background-position: top right;
-  }
+.galeria-container img:hover {
+  border: 5px solid rgb(215, 215, 216);
 }
 
-@keyframes movimiento {
-  from {
-    background-position: bottom left;
-  }
-  to {
-    background-position: top right;
-  }
-}
-.capa-gradient {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: -webkit-linear-gradient(left, black, #035faf);
-  opacity: 0.6;
-}
-
-.container-details {
-  display: flex;
-  justify-content: center;
-}
-
-.details {
-  max-width: 800px;
-  color: white;
-  position: relative;
-  text-align: center;
-  margin-top: 80px;
-}
-
-.details h2 {
-  font-size: 60px;
-  font-weight: 600;
-  margin-left: 10px;
-  color: #fff;
-}
-
-.details p {
-  margin-top: 10px;
-  font-size: 2.2rem;
-  font-weight: 100;
-  margin-left: 10px;
-}
-
-.details button {
-  padding: 10px 20px;
-  font-size: 18px;
-  border-style: none;
-  background-color: #014C6B;
-  color: white;
-  border: 1px solid #014C6B;
-  border-radius: 5px;
-  margin-top: 20px;
-  transition: background 300ms;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.details button:hover {
-  background: #03628b;
-  color: white;
-  border-radius: 5px;
-}
-
-.details .btn2 {
-  background-color: brown;
-}
-
-.details .btn2:hover {
-  background-color: rgb(202, 51, 51);
-}
-
-hr {
-  max-width: auto;
-  height: 4px;
-  border-style: none;
-  background: -webkit-linear-gradient(left, black, #0672d0);
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-/*Texto inicio*/
-.Tprincipal {
-  margin-top: 5px;
-  padding: 20px;
-  color: #fff;
-  background-image: url(../imagenes/patron.jpg);
-}
-
-.inicio {
+/* ---------- Nosotros ----------- */
+.nosotros {
   padding: 4rem;
   background-color: rgb(219, 219, 219);
 }
 
-.contenedor-inicio {
+.contenedor-nosotros {
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
+  background-color: rgb(205, 206, 206);
 }
 
-.inicio-texto {
+.nosotros-texto {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.inicio-texto p {
-  font-size: 2.5rem;
+.nosotros-texto p {
+  font-size: 3rem;
   line-height: 50px;
+  margin-top: 40px;
+  text-align: center;
 }
-.inicio-texto h4 {
+.nosotros-texto h4 {
   font-size: 4rem;
   margin-bottom: 30px;
+  margin-top: 30px;
+  font-weight: 700;
 }
 
-.inicio img {
+.nosotros img {
   width: 100%;
   height: 100%;
-}
-
-#material .contenedor {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-#material h4 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.materialh4 {
-  font-size: 5rem;
-  margin-top: 1rem;
-  color: #fff;
-  background-image: url(../imagenes/patron.jpg);
-}
-
-#material .item {
-  margin: 40px;
-}
-
-#material img {
-  width: 100%;
-  max-width: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 1024px) {
-  .contenedor-inicio {
+  .contenedor-nosotros {
     margin: 30px auto;
     width: 100%;
     display: grid;
@@ -507,6 +354,186 @@ hr {
     gap: 30px;
   }
 }
+@media screen and (max-width: 1023px) {
+  .contenedor-nosotros p {
+    font-size: 2.5rem;
+  }
+  .contenedor-nosotros h4 {
+    font-size: 3.2rem;
+  }
+}
+/* ---------- formulario ----------- */
+.mapa {
+  margin: 0 15px 0 15px;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  font-size: 2rem;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+input[type=submit] {
+  background-color: #014C6B;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background: #00425e;
+  color: white;
+  border-radius: 5px;
+}
+
+.container-fluid {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-size: 3rem;
+}
+
+.container-fluid h2 {
+  background-image: url(../imagenes/patron.jpg);
+  color: aliceblue;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25,
+.col-75,
+input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+}
+footer {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  background: #111;
+  height: auto;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: aliceblue;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3 {
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  color: aliceblue;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 0 0;
+}
+.socials li {
+  margin: 0 10px;
+}
+.socials li a {
+  text-decoration: none;
+}
+.socials li a i {
+  font-size: 1.1rem;
+  width: 20px;
+  transition: color 0.4s ease;
+}
+
+/* ---------- MIXIN ----------- */
+.footer-content {
+  font-size: 19px;
+  color: #035477;
+}
+
+.navbar {
+  font-size: 2.2rem;
+}
+
+.collapse ul {
+  gap: 10px;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: aliceblue;
+  background-image: url(../imagenes/patronceleste.jpg);
+  margin: 10px;
+}
+
+h2 {
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  margin: 10px;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+/* ---------- EXTEND ----------- */
+.btn {
+  background-color: #014C6B;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
 /* ------- MEDIAQ ------ */
 @media (max-width: 480px) {
   .footer-menu ul {
